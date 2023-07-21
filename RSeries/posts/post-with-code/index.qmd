@@ -1,5 +1,5 @@
 ---
-title: "Post With Code"
+title: "Post With NO Code"
 author: "Harlow Malloc"
 date: "2023-07-21"
 categories: [news, code, analysis]
