@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "R Series",
     "section": "",
-    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 21, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 18, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "medical\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 21, 2023\n\n\nRahul Goswami\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJul 18, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -16,9 +16,9 @@
   {
     "objectID": "posts/post-with-code/index.html",
     "href": "posts/post-with-code/index.html",
-    "title": "Post With NO Code",
+    "title": "Working with MRI Timeseries data in R",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "Most of the data retrieved from machines in medical fields are very complicated. We here considering a situation when the every scan of the MRI machine is saved in different files, where file names gives us various information, to be specific, suppose that we have files such as it contains session number, subject number, brain part name and the file contains a timeseries data of the brain part.\nNow we have thousands of files like these, and we have to retrieve information that will be easy to use for further analysis.\nLet’s suppose our target is to find the correlation between different parts of the brain, using the timeseries in the data, and arrange the data with columns the session id , patient id, brain part name and the correlation between the brain parts with resepect to a fixed brain part.\nLets discuss how our files will look like\n{patient_id}_{session_id}_{brain_part_name}.txt\nNow we have to read the data from the files and arrange them in a dataframe, where each row will contain the patient id, session id, brain part name and the correlation between the brain parts with resepect to a fixed brain part."
   },
   {
     "objectID": "posts/welcome/index.html",

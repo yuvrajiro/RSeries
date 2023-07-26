@@ -1,9 +1,23 @@
 ---
-title: "Post With NO Code"
-author: "Harlow Malloc" 
+title: "Working with MRI Timeseries data in R"
+author: "Rahul Goswami" 
 date: "2023-07-21"
-categories: [news, code, analysis]
+categories: [medical, code, analysis]
 image: "image.jpg"
 ---
 
-This is a post with executable code.
+The data outside outside college is life is not that straight forward, and most of the data scientist spend their time in cleaning the data. In this post, I will show you how to clean the MRI timeseries data in R.
+
+Most of the data retrieved from machines in medical fields are very complicated. We here considering a situation when the every scan of the MRI machine is saved in different files, where file names gives us various information, to be specific, suppose that we have files 
+such as it contains session number, subject number, brain part name and the file contains a timeseries data of the brain part. 
+
+Now we have thousands of files like these, and we have to retrieve information that will be easy to use for further analysis.
+
+Let's suppose our target is to find the correlation between different parts of the brain, using the timeseries in the data, and arrange the data with columns the session id , patient id, brain part name and the correlation between the brain parts with resepect to a fixed brain part.
+
+Lets discuss how our files will look like 
+
+`{patient_id}_{session_id}_{brain_part_name}.txt`
+
+Now we have to read the data from the files and arrange them in a dataframe, where each row will contain the patient id, session id, brain part name and the correlation between the brain parts with resepect to a fixed brain part.
+

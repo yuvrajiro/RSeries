@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harlow Malloc">
+<meta name="author" content="Rahul Goswami">
 <meta name="dcterms.date" content="2023-07-21">
 
-<title>RSeries - Post With NO Code</title>
+<title>R Series - statml.in - Working with MRI Timeseries data in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,7 +67,7 @@ ul.task-list{list-style: none;}
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">RSeries</span>
+    <span class="navbar-title">R Series - statml.in</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -78,12 +78,12 @@ ul.task-list{list-style: none;}
     <a class="nav-link" href="../../about.html">About</a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/yuvrajiro"><i class="bi bi-github" role="img">
 </i> 
  </a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/distribution_fu"><i class="bi bi-twitter" role="img">
 </i> 
  </a>
   </li>  
@@ -97,9 +97,9 @@ ul.task-list{list-style: none;}
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Post With NO Code</h1>
+      <h1 class="title">Working with MRI Timeseries data in R</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+                <div class="quarto-category">medical</div>
                 <div class="quarto-category">code</div>
                 <div class="quarto-category">analysis</div>
               </div>
@@ -112,7 +112,7 @@ ul.task-list{list-style: none;}
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Harlow Malloc </p>
+               <p>Rahul Goswami </p>
             </div>
     </div>
       
@@ -136,7 +136,13 @@ ul.task-list{list-style: none;}
 
 
 
-<p>This is a post with executable code.</p>
+<p>The data outside outside college is life is not that straight forward, and most of the data scientist spend their time in cleaning the data. In this post, I will show you how to clean the MRI timeseries data in R.</p>
+<p>Most of the data retrieved from machines in medical fields are very complicated. We here considering a situation when the every scan of the MRI machine is saved in different files, where file names gives us various information, to be specific, suppose that we have files such as it contains session number, subject number, brain part name and the file contains a timeseries data of the brain part.</p>
+<p>Now we have thousands of files like these, and we have to retrieve information that will be easy to use for further analysis.</p>
+<p>Let’s suppose our target is to find the correlation between different parts of the brain, using the timeseries in the data, and arrange the data with columns the session id , patient id, brain part name and the correlation between the brain parts with resepect to a fixed brain part.</p>
+<p>Lets discuss how our files will look like</p>
+<p><code>{patient_id}_{session_id}_{brain_part_name}.txt</code></p>
+<p>Now we have to read the data from the files and arrange them in a dataframe, where each row will contain the patient id, session id, brain part name and the correlation between the brain parts with resepect to a fixed brain part.</p>
 
 
 
